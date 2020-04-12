@@ -10,8 +10,6 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace MGS.OrderServo
@@ -28,12 +26,13 @@ namespace MGS.OrderServo
         #region Public Method
         public override byte[] ReadBuffer()
         {
-            throw new NotImplementedException();
+            Debug.LogError("NotImplementedException");
+            return null;
         }
 
         public override void WriteBuffer(byte[] buffer)
         {
-            throw new NotImplementedException();
+            Debug.LogError("NotImplementedException");
         }
         #endregion
     }
