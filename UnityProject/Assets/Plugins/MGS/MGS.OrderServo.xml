@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MGS.OrderServo</name>
+    </assembly>
+    <members>
+        <member name="T:MGS.OrderServo.MonoOrderIO">
+            <summary>
+            Mono order IO.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.MonoOrderIO.ReadBuffer">
+            <summary>
+            Read buffer from IO.
+            </summary>
+            <returns>Buffer from IO.</returns>
+        </member>
+        <member name="M:MGS.OrderServo.MonoOrderIO.WriteBuffer(System.Byte[])">
+            <summary>
+            Write buffer to IO.
+            </summary>
+            <param name="buffer">Buffer to IO.</param>
+        </member>
+        <member name="T:MGS.OrderServo.MonoOrderUnit">
+            <summary>
+            Mono order unit.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.MonoOrderUnit.code">
+            <summary>
+            Code of order unit.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.MonoOrderUnit.Code">
+            <summary>
+            Code of order unit.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.MonoOrderUnit.OnRespond">
+            <summary>
+            On order unit respond.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.MonoOrderUnit.Execute(System.Object)">
+            <summary>
+            Execute order.
+            </summary>
+            <param name="args">Order args.</param>
+        </member>
+        <member name="T:MGS.OrderServo.OrderManager">
+            <summary>
+            Manager of orders.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderManager.OrderIO">
+            <summary>
+            Order IO.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderManager.OrderParser">
+            <summary>
+            Order parser.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.OrderManager.orderBuffer">
+            <summary>
+            Order pending buffer.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderManager.IsSettingsValid">
+            <summary>
+            The settings of manager is valid?
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderManager.ReadOrders">
+            <summary>
+            Read orders from pending buffer.
+            </summary>
+            <returns>Current orders.</returns>
+        </member>
+        <member name="M:MGS.OrderServo.OrderManager.AddOrder(MGS.OrderServo.Order)">
+            <summary>
+            Add order to pending buffer.
+            </summary>
+            <param name="order">Order to add.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderManager.RemoveOrder(MGS.OrderServo.Order)">
+            <summary>
+            Remove order from pending buffer.
+            </summary>
+            <param name="order">Order to remove.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderManager.RespondOrder(MGS.OrderServo.Order)">
+            <summary>
+            Respond order to manager.
+            </summary>
+            <param name="order">Order to respond.</param>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderParser">
+            <summary>
+            Interface for order parser.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderParser.ToOrders(System.Byte[])">
+            <summary>
+            Parser byte buffer to orders.
+            </summary>
+            <param name="buffer">Buffer to parse.</param>
+            <returns>Orders from buffer.</returns>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderParser.ToBuffer(MGS.OrderServo.Order)">
+            <summary>
+            Parser order to byte buffer.
+            </summary>
+            <param name="order">Order to parse.</param>
+            <returns>Buffer from order.</returns>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderIO">
+            <summary>
+            Interface for order IO.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderIO.ReadBuffer">
+            <summary>
+            Read buffer from IO.
+            </summary>
+            <returns>Buffer from IO.</returns>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderIO.WriteBuffer(System.Byte[])">
+            <summary>
+            Write buffer to IO.
+            </summary>
+            <param name="buffer">Buffer to IO.</param>
+        </member>
+        <member name="T:MGS.OrderServo.OrderServoProcessor">
+            <summary>
+            Order servo processor.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderServoProcessor.OrderManager">
+            <summary>
+            Manager of orders.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderServoProcessor.OrderUnitManager">
+            <summary>
+            Manager of order units.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.OrderServoProcessor.orderUnitManager">
+            <summary>
+            Manager of order units.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderServoProcessor.IsSettingsValid">
+            <summary>
+            The settings of processor is valid?
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderServoProcessor.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderServoProcessor.OnUpdate">
+            <summary>
+            On update.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderServoProcessor.OnUnitRespond(MGS.OrderServo.Order)">
+            <summary>
+            On unit respond.
+            </summary>
+            <param name="order">Respond order.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderServoProcessor.Initialize(MGS.OrderServo.IOrderManager,MGS.OrderServo.IOrderUnitManager)">
+            <summary>
+            Initialize processor.
+            </summary>
+            <param name="orderManager">Manager of orders.</param>
+            <param name="unitManager">Manager of order units.</param>
+        </member>
+        <member name="T:MGS.OrderServo.OrderUnit">
+            <summary>
+            Order unit.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderUnit.Code">
+            <summary>
+            Code of order unit.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderUnit.OnRespond">
+            <summary>
+            On order unit respond.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnit.Execute(System.Object)">
+            <summary>
+            Execute order.
+            </summary>
+            <param name="args">Order args.</param>
+        </member>
+        <member name="T:MGS.OrderServo.OrderUnitManager">
+            <summary>
+            Manager of order units.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.OrderUnitManager.OnRespond">
+            <summary>
+            On order respond.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.OrderUnitManager.units">
+            <summary>
+            units managed by this manager.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnitManager.OnUnitRespond(System.String,System.Object)">
+            <summary>
+            On order unit respond.
+            </summary>
+            <param name="code">Order code.</param>
+            <param name="args">Order args.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnitManager.AddUnit(MGS.OrderServo.IOrderUnit)">
+            <summary>
+            Add order unit.
+            </summary>
+            <param name="unit">Order unit.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnitManager.RemoveUnit(System.String)">
+            <summary>
+            Remove order unit.
+            </summary>
+            <param name="code">Unit code.</param>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnitManager.ClearUnits">
+            <summary>
+            Clear order units.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.OrderUnitManager.Execute(MGS.OrderServo.Order)">
+            <summary>
+            Execute order.
+            </summary>
+            <param name="order">Order to execute.</param>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderManager">
+            <summary>
+            Interface for order manager.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderManager.OrderIO">
+            <summary>
+            Order IO.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderManager.OrderParser">
+            <summary>
+            Order parser.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderManager.ReadOrders">
+            <summary>
+            Read orders from manager.
+            </summary>
+            <returns>Current orders.</returns>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderManager.AddOrder(MGS.OrderServo.Order)">
+            <summary>
+            Add order to manager.
+            </summary>
+            <param name="order">Order to add.</param>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderManager.RemoveOrder(MGS.OrderServo.Order)">
+            <summary>
+            Remove order from manager.
+            </summary>
+            <param name="order">Order to remove.</param>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderManager.RespondOrder(MGS.OrderServo.Order)">
+            <summary>
+            Respond order to manager.
+            </summary>
+            <param name="order">Order to respond.</param>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderServoProcessor">
+            <summary>
+            Interface for order servo processor.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderServoProcessor.OrderManager">
+            <summary>
+            Manager of orders.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderServoProcessor.OrderUnitManager">
+            <summary>
+            Manager of order units.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderServoProcessor.Initialize(MGS.OrderServo.IOrderManager,MGS.OrderServo.IOrderUnitManager)">
+            <summary>
+            Initialize processor.
+            </summary>
+            <param name="orderManager">Manager of orders.</param>
+            <param name="unitManager">Manager of order units.</param>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderUnit">
+            <summary>
+            Interface for order Unit.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderUnit.Code">
+            <summary>
+            Order unit code.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderUnit.OnRespond">
+            <summary>
+            On order unit respond.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderUnit.Execute(System.Object)">
+            <summary>
+            Execute order.
+            </summary>
+            <param name="args">Order args.</param>
+        </member>
+        <member name="T:MGS.OrderServo.IOrderUnitManager">
+            <summary>
+            Interface for order units manager.
+            </summary>
+        </member>
+        <member name="P:MGS.OrderServo.IOrderUnitManager.OnRespond">
+            <summary>
+            On order respond.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderUnitManager.AddUnit(MGS.OrderServo.IOrderUnit)">
+            <summary>
+            Add order unit.
+            </summary>
+            <param name="unit">Order unit.</param>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderUnitManager.RemoveUnit(System.String)">
+            <summary>
+            Remove order unit.
+            </summary>
+            <param name="code">Unit code.</param>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderUnitManager.ClearUnits">
+            <summary>
+            Clear order units.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.IOrderUnitManager.Execute(MGS.OrderServo.Order)">
+            <summary>
+            Execute order.
+            </summary>
+            <param name="order">Order to execute.</param>
+        </member>
+        <member name="T:MGS.OrderServo.Order">
+            <summary>
+            Order content.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.Order.code">
+            <summary>
+            Order unit code.
+            </summary>
+        </member>
+        <member name="F:MGS.OrderServo.Order.args">
+            <summary>
+            Order args.
+            </summary>
+        </member>
+        <member name="M:MGS.OrderServo.Order.#ctor(System.String,System.Object)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="code">Order code.</param>
+            <param name="args">Order args.</param>
+        </member>
+    </members>
+</doc>
