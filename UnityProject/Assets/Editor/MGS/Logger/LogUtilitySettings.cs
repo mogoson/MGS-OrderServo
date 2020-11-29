@@ -10,7 +10,6 @@
  *  Description  :  Initial development version.
  *************************************************************************/
 
-using MGS.Common.Logger;
 using UnityEngine;
 
 namespace MGS.Logger
@@ -20,15 +19,6 @@ namespace MGS.Logger
     /// </summary>
     static class LogUtilitySettings
     {
-        #region Field and Property
-#if !UNITY_EDITOR
-        /// <summary>
-        /// Path of log file.
-        /// </summary>
-        static readonly string LogPath = Application.persistentDataPath + "/Log/";
-#endif
-        #endregion
-
         #region Public Method
         /// <summary>
         /// Initialize log utility.
@@ -36,12 +26,9 @@ namespace MGS.Logger
         [RuntimeInitializeOnLoadMethod]
         static void Initialize()
         {
-#if UNITY_EDITOR
-            LogUtility.Logger = UnityDebugger.Instance;
-#else
-            FileLogger.Instance.LogPath = LogPath;
-            LogUtility.Logger = FileLogger.Instance;
-#endif
+            //LogUtility auto create a FileLogger default, log dir is Environment.CurrentDirectory/Log
+            //if you do not need it, invoke the LogUtility.ClearLoggers() method to clear, then add your logger to LogUtility.
+            LogUtility.AddLogger(new UnityDebugger());
         }
         #endregion
     }

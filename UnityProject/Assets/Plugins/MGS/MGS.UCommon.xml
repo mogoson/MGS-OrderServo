@@ -942,6 +942,26 @@
             </summary>
             <param name="eventData">Pointer event data.</param>
         </member>
+        <member name="T:MGS.UCommon.Generic.Axis">
+            <summary>
+            Coordinate axis.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.Axis.X">
+            <summary>
+            X axis.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.Axis.Y">
+            <summary>
+            Y axis.
+            </summary>
+        </member>
+        <member name="F:MGS.UCommon.Generic.Axis.Z">
+            <summary>
+            Z axis.
+            </summary>
+        </member>
         <member name="T:MGS.UCommon.Generic.ColorBlendMode">
             <summary>
             Mode of color blend.
