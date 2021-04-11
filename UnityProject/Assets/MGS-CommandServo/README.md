@@ -1,4 +1,4 @@
-﻿# MGS-CommandServo
+# MGS-CommandServo
 
 ## Summary
 - Command servo system for Unity project.
@@ -30,9 +30,9 @@
 
 ## Usage
 1. Use CommandIO and CommandParser to create CommandManager.
-2. Create CommandUnitManager, and register command unit inventory.
-3. Use CommandManager and CommandUnitManager to initialize CommandServoProcessor.
-4. Turn on the CommandServoProcessor.
+1. Create CommandUnitManager, and register command unit inventory.
+1. Use CommandManager and CommandUnitManager to initialize CommandServoProcessor.
+1. Turn on the CommandServoProcessor.
 
 ## Demo
 - Demos in the path "MGS-CommandServo/Scenes" provide reference to you.
@@ -42,3 +42,5 @@
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@outlook.com.
+
+Copyright © 2021 Mogoson. All rights reserved.
