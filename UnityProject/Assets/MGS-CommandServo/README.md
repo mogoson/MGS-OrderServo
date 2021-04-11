@@ -34,9 +34,11 @@
 3. Use CommandManager and CommandUnitManager to initialize CommandServoProcessor.
 4. Turn on the CommandServoProcessor.
 
-## Preview
-- Command Servo System.
-![CommandServoSystem](./Attachment/README_Image/CommandServoSystem.PNG)
+## Demo
+- Demos in the path "MGS-CommandServo/Scenes" provide reference to you.
+
+## Source
+- https://github.com/mogoson/MGS-CommandServo.
 
 ## Contact
 - If you have any questions, feel free to contact me at mogoson@outlook.com.
